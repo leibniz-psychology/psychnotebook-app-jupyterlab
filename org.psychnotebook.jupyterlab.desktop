@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=JupyterLab
+TryExec=startjupyterlab
+Exec=startjupyterlab
+Keywords=PsychNotebook
+Categories=Science;Development
+X-Conductor-Key=jupyterlab
+X-Conductor-Socket=~/.jupyterlab-socket

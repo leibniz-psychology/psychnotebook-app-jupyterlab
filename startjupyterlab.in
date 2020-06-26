@@ -1,0 +1,13 @@
+#!/bin/bash
+
+exec \
+	JUPYTER_PREFIX/bin/jupyter lab \
+	--sock=$HOME/.jupyterlab-socket \
+	--no-browser \
+	--NotebookApp.allow_remote_access=True \
+	--NotebookApp.token='' \
+	--NotebookApp.shutdown_no_activity_timeout=3600 \
+	--MappingKernelManager.cull_idle_timeout=3600 \
+	--MappingKernelManager.cull_interval=300 \
+	--KernelManager.transport=ipc
+
