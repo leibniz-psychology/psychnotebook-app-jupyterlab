@@ -9,5 +9,4 @@ Categories=Science;Development
 Description=Create code-base documents.
 Description[de]=Eignet sich zur Erstellung von Präsentationen oder Textdokumenten, die ausführbaren Code enthalten.
 Icon=jupyterlab
-X-Conductor-Key=jupyterlab
-X-Conductor-Socket=~/.jupyterlab-socket
+Interfaces=org.leibniz-psychology.conductor.v1

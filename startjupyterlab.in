@@ -1,8 +1,15 @@
 #!/bin/bash
 
+while getopts s: opt
+do
+   case $opt in
+       s) SOCKET_PATH="$OPTARG";;
+   esac
+done
+
 exec \
 	JUPYTER_PREFIX/bin/jupyter lab \
-	--sock=$HOME/.jupyterlab-socket \
+	--sock=${SOCKET_PATH:-.jupyterlab-socket} \
 	--no-browser \
 	--NotebookApp.allow_remote_access=True \
 	--NotebookApp.token='' \
