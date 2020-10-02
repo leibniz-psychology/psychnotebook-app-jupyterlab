@@ -7,6 +7,9 @@ do
    esac
 done
 
+# Change the directory of nbserver-<pid>{.json,-open.html}, because in a pid
+# namespace (i.e. container) <pid> is not unique.
+export JUPYTER_RUNTIME_DIR="$(dirname $SOCKET_PATH)"
 exec \
 	JUPYTER_PREFIX/bin/jupyter lab \
 	--sock=${SOCKET_PATH:-.jupyterlab-socket} \
